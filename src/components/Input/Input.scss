@@ -1,0 +1,80 @@
+.inputBox {
+    position: relative;
+    box-sizing: border-box;
+    
+    input {
+        width: 380px;
+        background: #F8F8F8;
+        border: 1px solid #D0CFCF;
+        outline: none;
+        border-radius: 4px;
+        font-size: 16px;
+        line-height: 26px;
+        padding: 14px 16px;
+        color: rgba(0, 0, 0, 0.87);
+    }
+    input:invalid {
+        background: #F8F8F8;
+        border: 2px solid #CB3D40;
+        outline: none;
+        border-radius: 4px;
+        font-size: 16px;
+        line-height: 26px;
+        padding: 14px 16px;
+        color: rgba(0, 0, 0, 0.87);
+    }
+    span {
+        position: absolute;
+        left: 1px;
+        top: 1px;
+        pointer-events: none;
+        font-size: 16px;
+        line-height: 26px;
+        padding: 14px 16px;
+        color: #7E7E7E;
+        transition: 0.5s;
+    }
+    input:focus ~ span  {
+        color: #7E7E7E;
+        transform: translateX(12px) translateY(-14px);
+        font-size: 12px;
+        padding: 0 4px;
+        background-color: #F8F8F8;
+    }
+    input:focus:invalid ~ span  {
+        color: #CB3D40;
+        transform: translateX(12px) translateY(-14px);
+        font-size: 12px;
+        padding: 0 4px;
+        background-color: #F8F8F8;
+    }
+    p {
+        position: relative;
+        top: 4px;
+        left: 16px;
+        margin: 0;
+        font-size: 12px;
+        line-height: 14px;
+        color: #7E7E7E;
+        letter-spacing: -1px;
+    }
+    input:invalid ~ p {
+        position: relative;
+        top: 4px;
+        left: 16px;
+        margin: 0;
+        font-size: 12px;
+        line-height: 14px;
+        color: #CB3D40;
+    }
+
+
+}
+
+@media (max-width:650px) {
+    .inputBox {
+        input {
+            width: 328px;
+        }
+    }
+}

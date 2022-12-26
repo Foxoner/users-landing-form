@@ -1,0 +1,107 @@
+.Form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font-size: 40px;
+        line-height: 40px;
+        color: rgba(0, 0, 0, 0.87);
+        text-align: center;
+    }
+    .form-wrapper {
+        width: 380px;
+        &__input-item {
+            margin-top: 50px;
+        }
+        &__title {
+            margin: 25px auto 11px auto;
+            font-size: 16px;
+            line-height: 26px;
+            color: rgba(0, 0, 0, 0.87);
+        }
+        &__radio-btn {
+            margin-bottom: 7px;
+            display: flex;
+            align-items: center;
+            input {
+                width: 20px;
+                height: 20px;
+                margin-right: 12px;
+                
+            }
+            label {
+                font-size: 16px;
+                line-height: 26px;
+                color: rgba(0, 0, 0, 0.87);
+            }
+        }
+        &__file-input {
+            display: flex;
+            margin-top: 47px;
+            border-radius: 4px;
+            label {
+                display: block;
+                font-size: 16px;
+                line-height: 26px;
+                padding: 14px 16px;
+                border: 1px solid rgba(0, 0, 0, 0.87);
+                border-radius: 4px 0px 0px 4px;
+                color: rgba(0, 0, 0, 0.87); 
+                cursor: pointer;   
+            }
+            .label-invalid {
+                border: 2px solid #CB3D40;
+                border-radius: 4px 0px 0px 4px;
+            }
+            input[type="file"] {
+                display: none;
+            }
+            .imgName {
+                width: 100%;
+                display: block;
+                font-size: 16px;
+                line-height: 26px;
+                padding: 14px 16px;
+                border: 1px solid #D0CFCF;
+                border-radius: 0px 4px 4px 0px;
+                border-left: none;
+                color: #7E7E7E;
+            }
+            .imgName.valid {
+                color: rgba(0, 0, 0, 0.87);
+            }
+            .imgName.invalid {
+                border: 2px solid #CB3D40;
+                border-radius: 4px;
+                border-radius: 0px 4px 4px 0px;
+                border-left: none;
+                color: rgba(0, 0, 0, 0.87);
+            }
+        }
+        &__file-input-helper {
+            position: relative;
+            top: 4px;
+            left: 16px;
+            margin: 0;
+            font-size: 12px;
+            line-height: 14px;
+            color: #CB3D40;
+        }
+        &__button {
+            margin-top: 50px;
+            margin-bottom: 100px;
+            text-align: center;
+        }
+    }
+    
+}
+
+@media (max-width:650px) {
+    .Form {
+        .form-wrapper {
+            width: 328px;
+        }
+    }
+}
